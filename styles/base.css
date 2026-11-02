@@ -1,0 +1,207 @@
+:root {
+    --primary: #1e5a43;
+    --primary-dark: #143d2e;
+    --accent: #ffd46b;
+    --text: #1f2328;
+    --light: #f6f8f7;
+    --border: #c9d6d0;
+    --heading-font: "Lexend", Arial, sans-serif;
+    --body-font: "Source Sans 3", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #fff;
+}
+
+/* Header */
+
+header {
+    background-color: var(--primary);
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    padding: 1.25rem 1rem;
+    font-family: var(--heading-font);
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+/* Navigation (CSS Flex) */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary-dark);
+}
+
+nav a {
+    flex: 1 1 auto;
+    padding: 0.75rem;
+    font-family: var(--heading-font);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Hover effect: colour change and underline bar, no layout shift */
+nav a:hover,
+nav a:focus-visible {
+    background-color: var(--primary);
+    border-bottom-color: var(--accent);
+}
+
+/* Main */
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 1.25rem;
+}
+
+/* Cards (CSS Grid) */
+
+.cards {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: var(--primary);
+    color: #fff;
+    font-family: var(--heading-font);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.6rem;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 1rem;
+    align-items: start;
+}
+
+.about img {
+    width: 150px;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--primary-dark);
+    margin: 1rem auto;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+    max-width: 80%;
+}
+
+.place {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 120px;
+    height: auto;
+    border: 1px solid var(--border);
+}
+
+figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.card ul {
+    padding-left: 1.25rem;
+}
+
+.card li {
+    margin: 0.4rem 0;
+}
+
+.card li a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.card li a:hover {
+    color: var(--primary-dark);
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--heading-font);
+}
+
+#lastModified {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+/* Small screens */
+
+@media (max-width: 700px) {
+    .cards,
+    .about,
+    .place {
+        grid-template-columns: 1fr;
+    }
+
+    .about img {
+        justify-self: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}

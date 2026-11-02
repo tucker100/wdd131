@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – McMavin Nesiama Tucker</title>
+    <meta name="description"
+      content="WDD 131 – Dynamic Web Fundamentals course home page for McMavin Nesiama Tucker: about me, Warri Nigeria, solar energy, and web development resources.">
+    <meta name="author" content="McMavin Nesiama Tucker">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
-    <hi>WDD 131 - Tucker Baba</hi>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/mc-mavin-tucker-333a78116/">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&amp;id=p7#p7">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>McMavin Nesiama Tucker</h1>
+
+        <div class="cards">
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content">
+                    <div class="about">
+                        <p>My name is McMavin, and I am a solar PV technician from Nigeria. I design and
+                            install solar systems for homes and businesses, and I have also worked as a
+                            solar energy instructor. I enjoy teaching, photography, and learning new
+                            skills, which is why I am studying web development.</p>
+                        <img src="images/mcmavin-tucker.webp" alt="Portrait of McMavin Nesiama Tucker"
+                          width="150" height="188">
+                    </div>
+
+                    <h3>Warri, Nigeria</h3>
+
+                    <div class="place">
+                        <figure>
+                            <img src="images/nigeria-flag.svg" alt="The green and white flag of Nigeria"
+                              width="120" height="60">
+                            <figcaption>Official Flag of Nigeria</figcaption>
+                        </figure>
+                        <p>Warri is an oil city in Delta State, in the Niger Delta region of southern
+                            Nigeria. It sits near the Warri River and is known for its busy markets,
+                            friendly people, and its role in Nigeria's energy industry. Nigeria is the most
+                            populous country in Africa.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-content">
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+                        <li><a href="https://dev.to/">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                        <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> | McMavin Nesiama Tucker | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
